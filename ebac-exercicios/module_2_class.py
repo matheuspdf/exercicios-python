@@ -42,7 +42,8 @@ dia_11_transacao_2 = -798.58
 dia_11_transacao_3 = 427.12
 dia_11_transacao_4 = -10.91
 
-dia_11_saldo_final = dia_11_saldo_inicial + dia_11_transacao_1 + dia_11_transacao_2 + dia_11_transacao_3 + dia_11_transacao_4
+dia_11_saldo_final = dia_11_saldo_inicial + dia_11_transacao_1 + \
+    dia_11_transacao_2 + dia_11_transacao_3 + dia_11_transacao_4
 
 print(dia_11_saldo_final)
 
@@ -53,7 +54,8 @@ print(dia_11_saldo_final)
 Armazenam sequências mutáveis e ordenadas de valores. São do tipo `list`:
 """
 
-usuario_web = ['André Perez', 'andre.perez', 'andre123', 'andre.perez@gmail.com']
+usuario_web = ['André Perez', 'andre.perez',
+               'andre123', 'andre.perez@gmail.com']
 
 print(usuario_web)
 print(type(usuario_web))
@@ -62,7 +64,8 @@ idade = 20
 saldo_em_conta = 723.15
 usuario_loggedin = True
 
-usuario_web = ['André Perez', idade, 'andre.perez', 'andre123', 'andre.perez@gmail.com', saldo_em_conta, usuario_loggedin]
+usuario_web = ['André Perez', idade, 'andre.perez', 'andre123',
+               'andre.perez@gmail.com', saldo_em_conta, usuario_loggedin]
 
 print(usuario_web)
 print(type(usuario_web))
@@ -158,7 +161,9 @@ dia_11_transacoes.append(-10.91)
 
 print(dia_11_transacoes)
 
-dia_11_saldo_final = dia_11_saldo_inicial + dia_11_transacoes[0] + dia_11_transacoes[1] + dia_11_transacoes[2] + dia_11_transacoes[3]
+dia_11_saldo_final = dia_11_saldo_inicial + \
+    dia_11_transacoes[0] + dia_11_transacoes[1] + \
+    dia_11_transacoes[2] + dia_11_transacoes[3]
 print(dia_11_saldo_final)
 
 """## 2\. Conjuntos
@@ -176,7 +181,8 @@ hashtags_sex = ['#juliete', '#arthur', '#bbb']
 
 """Um simples concateção de listas fará com que a *hashtag* #bbb, entre outras, apareça mais de uma vez."""
 
-hashtags_semana = hashtags_seg + hashtags_ter + hashtags_qua + hashtags_qui + hashtags_sex
+hashtags_semana = hashtags_seg + hashtags_ter + \
+    hashtags_qua + hashtags_qui + hashtags_sex
 print(hashtags_semana)
 
 """### **2.2. Definição**
@@ -242,7 +248,8 @@ print(type(list(times_paulistas)))
 print(hashtags_semana)
 print(len(hashtags_semana))
 
-hashtags_semana = list(set(hashtags_seg + hashtags_ter + hashtags_qua + hashtags_qui + hashtags_sex))
+hashtags_semana = list(set(hashtags_seg + hashtags_ter +
+                       hashtags_qua + hashtags_qui + hashtags_sex))
 
 print(hashtags_semana)
 print(len(hashtags_semana))
@@ -284,16 +291,16 @@ print(carro)
 
 cadastro = {
     'andre': {
-        'nome': 'Andre Perez', 
-        'ano_nascimento': 1992, 
+        'nome': 'Andre Perez',
+        'ano_nascimento': 1992,
         'pais': {
             'pai': {
-              'nome': '<nome-do-pai> Perez', 
-              'ano_nascimento': 1971
+                'nome': '<nome-do-pai> Perez',
+                'ano_nascimento': 1971
             },
             'mae': {
-              'nome': '<nome-da-mae> Perez', 
-              'ano_nascimento': 1973
+                'nome': '<nome-da-mae> Perez',
+                'ano_nascimento': 1973
             },
         }
     }
