@@ -91,7 +91,7 @@ Neste exercício vamos trabalhar com os arquivos de csv e texto definidos abaixo
 
 ## 1\. Funções para arquivo csv
 
-Complete a função abaixo para extrair uma coluna do arquivo csv em uma lista. Os elementos devem ter o tipo de dado correto.
+## Complete a função abaixo para extrair uma coluna do arquivo csv em uma lista. Os elementos devem ter o tipo de dado correto.
 """
 
 def extrai_coluna_csv(nome_arquivo: str, indice_coluna: int, tipo_dado: str):
@@ -135,17 +135,19 @@ Complete a função abaixo para extrair uma as palavras de uma linha do arquivo 
 
 def extrai_linha_txt(nome_arquivo: str, numero_linha: int):
 
-  palavras_linha = []
-
+  with open(file=nome_arquivo, mode='r', encoding='utf8') as arq_texto:
+    linhas = arq_texto.read().splitlines()
+    # a função splitlines() já retorna uma lista
+    # em que cada elemento é uma string referente a uma linha do arquivo 
+ 
+  return linhas[numero_linha].split()
   # leia o arquivo com o comando 'with' utilizando o parametro 'nome_arquivo'
   # extraia a linha do arquivo utilizando o parametro 'numero_linha'
   # quebre a linha em palavras com o comando split, note que o separador é um espaço ' '
 
-  return palavras_linha
-
 """Você pode testar a função com os códigos abaixo."""
 
-linha10 = extrai_linha_txt(nome_arquivo='./musica.txt', numero_linha=10)
+linha10 = extrai_linha_txt(nome_arquivo='./musica.txt', numero_linha=5)
 print(linha10) # deve retornar ['Mas', 'eis', 'que', 'chega', 'a', 'roda', 'viva']
 
 """---"""
